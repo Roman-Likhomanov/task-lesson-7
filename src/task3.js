@@ -15,7 +15,7 @@ export function tabl() {
 }
 
 export function sumnum() {
-  const N = window.prompt('enter num');
+  const N = window.prompt("enter num");
   let sum = 0;
   let count = 0;
 

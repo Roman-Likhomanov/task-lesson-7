@@ -1,24 +1,24 @@
 export function hideButton(el) {
-  const form = document.createElement('form');
+  const form = document.createElement("form");
   el.appendChild(form);
 
-  const button = document.createElement('button');
+  const button = document.createElement("button");
   form.appendChild(button);
   button.hidden = true;
 }
 // hideButton();
 
 export function showButton(el) {
-  const form = document.createElement('form');
+  const form = document.createElement("form");
   el.appendChild(form);
 
-  const button = document.createElement('button');
+  const button = document.createElement("button");
   form.appendChild(button);
 
-  const input = document.createElement('input');
+  const input = document.createElement("input");
   form.appendChild(input);
 
-  input.addEventListener('keydown', () => {
+  input.addEventListener("keydown", () => {
     button.hidden = false;
   });
 }

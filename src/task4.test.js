@@ -1,33 +1,33 @@
-import { addage, clone, destructurization } from './task4';
+import { addage, clone, destructurization } from "./task4";
 
-describe('addage', () => {
-  it('age user', () => {
+describe("addage", () => {
+  it("age user", () => {
     const user = {
-      name: 'John',
+      name: "John",
     };
-    jest.spyOn(window, 'prompt').mockReturnValue('20');
+    jest.spyOn(window, "prompt").mockReturnValue("20");
     addage(user);
     expect(user.age).toBe(20);
   });
 });
-describe('clone', () => {
-  it('clone user', () => {
+describe("clone", () => {
+  it("clone user", () => {
     const user = {
-      name: 'John',
+      name: "John",
     };
     expect(clone(user)).toStrictEqual({
-      name: 'John',
-      role: 'admin',
+      name: "John",
+      role: "admin",
     });
   });
 });
-describe('destructurization', () => {
-  it('destructurization user', () => {
+describe("destructurization", () => {
+  it("destructurization user", () => {
     const user = {
-      name: 'John',
+      name: "John",
     };
     console.log = jest.fn();
     destructurization(user);
-    expect(console.log).toHaveBeenCalledWith('John', 'admin');
+    expect(console.log).toHaveBeenCalledWith("John", "admin");
   });
 });
