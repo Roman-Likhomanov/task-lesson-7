@@ -6,8 +6,8 @@ export function diff(a, b) {
 }
 
 export function isWord() {
-  const word = prompt('enter text');
-  const arr = word.split(' ');
+  const word = prompt("enter text");
+  const arr = word.split(" ");
   if (arr.length > 1) {
     return false;
   }
