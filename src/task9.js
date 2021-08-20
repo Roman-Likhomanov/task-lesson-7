@@ -9,38 +9,35 @@ export function rightTriangle(a, b, c) {
 
   if (a2 + b2 == c2) {
     return 'Right';
-  } else {
-    return 'Wrong';
   }
-} 
- 
+  return 'Wrong';
+}
+
 export function lengthArea() {
   const r = prompt('enter r');
 
   const l = 2 * Math.PI * r;
   console.log(Math.floor(l));
-    
+
   const s = Math.PI * Math.pow(r, 2);
   console.log(Math.floor(s));
-} 
+}
 
 export function solutionEquation() {
-    //ax2 + bx + c = 0;
+  // ax2 + bx + c = 0;
   const a = +prompt('enter a');
   const b = +prompt('enter b');
   const c = +prompt('enter c');
 
   const d = Math.pow(b, 2) - 4 * a * c;
 
-  if ( d > 0) {
+  if (d > 0) {
     const x1 = (-b + Math.sqrt(d)) / 2 * a;
     const x2 = (-b - Math.sqrt(d)) / 2 * a;
     return `${x1}, ${x2}`;
-  } else if ( d == 0) {
+  } if (d == 0) {
     const x3 = -b / 2 * a;
     return x3;
-  } else {
-    return 'no roots';
-  };
-} 
-      
+  }
+  return 'no roots';
+}
