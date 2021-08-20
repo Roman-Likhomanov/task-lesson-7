@@ -12,7 +12,6 @@ import {arrx2} from './task5';
 describe("arrx2", () => {
   it("array multiplied by 2", () => {
     let arr = [1,2,3,4,5,6,7,8,9,10];
-    arrx2(arr);
     expect(arrx2(arr)).toStrictEqual([2,4,6,8,10,12,14,16,18,20]);
   });
 });

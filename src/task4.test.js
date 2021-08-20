@@ -16,7 +16,6 @@ describe("clone", () => {
     let user = {
         name: 'John'
         };
-    clone(user);
     expect(clone(user)).toStrictEqual({name: 'John',
     role: 'admin'});
   });
