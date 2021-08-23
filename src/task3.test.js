@@ -1,9 +1,9 @@
-import { sum, tabl, sumnum } from "./task3";
+import { summ, tabl, sumnum } from "./task3";
 
-describe("sum", () => {
+describe("summ", () => {
   it("the sum of the numbers from 50 to 100", () => {
     console.log = jest.fn();
-    sum();
+    summ();
     expect(console.log).toHaveBeenCalledWith(3825);
   });
 });

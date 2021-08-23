@@ -1,8 +1,12 @@
 export function max(a, b) {
-  b > a ? console.log(b) : console.log(a);
+  if (b > a) {
+    console.log(b);
+  } else {
+    console.log(a);
+  }
 }
 
-export function month() {
+export function nameMonth() {
   const month = window.prompt("Enter number");
   switch (+month) {
     case 1:
@@ -44,9 +48,13 @@ export function month() {
   }
 }
 
-export function square(circle, square) {
+export function circleSquare(circle, square) {
   const r2 = circle / 3.14;
   const a = Math.sqrt(square);
   const r = Math.sqrt(r2);
-  a >= 2 * r ? console.log("yes") : console.log("no");
+  if (a >= 2 * r) {
+    console.log("yes");
+  } else {
+    console.log("no");
+  }
 }

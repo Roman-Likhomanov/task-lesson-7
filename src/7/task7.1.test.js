@@ -18,7 +18,7 @@ describe("pageLayout", () => {
 
     const values = [["I love JavaScript!"], ["I love IT!"], ["I love world!"]];
     expect(
-      [...el.querySelectorAll("ul.history li")].map((el) => el.innerHTML)
+      [...el.querySelectorAll("ul.history li")].map((elem) => elem.innerHTML)
     ).toEqual(values.map(([value]) => value));
   });
 });
