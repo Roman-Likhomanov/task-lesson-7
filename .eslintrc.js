@@ -11,6 +11,12 @@ module.exports = {
   },
   plugins: ["jest"],
   rules: {
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "default-case": "off",
+    "no-useless-escape": "off",
+    "no-alert": "off",
+    "no-console": "off",
     "max-len": [
       "error",
       {

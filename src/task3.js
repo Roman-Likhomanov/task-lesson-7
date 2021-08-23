@@ -1,4 +1,4 @@
-export function sum() {
+export function summ() {
   let sum = 0;
   for (let i = 50; i <= 100; i++) {
     sum += i;
@@ -21,7 +21,7 @@ export function sumnum() {
 
   for (let i = 1; i <= N; i++) {
     if (i % 2 !== 0) {
-      count += 1;
+      count++;
       sum += i;
     }
   }

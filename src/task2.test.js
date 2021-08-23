@@ -1,4 +1,4 @@
-import { max, month, square } from "./task2";
+import { max, nameMonth, circleSquare } from "./task2";
 
 describe("max", () => {
   it("max number", () => {
@@ -7,18 +7,18 @@ describe("max", () => {
     expect(console.log).toHaveBeenCalledWith(2);
   });
 });
-describe("month", () => {
+describe("nameMonth", () => {
   it("enter the number and get a month", () => {
     jest.spyOn(window, "prompt").mockReturnValue("12");
     console.log = jest.fn();
-    month();
+    nameMonth();
     expect(console.log).toHaveBeenCalledWith("dec");
   });
 });
-describe("square", () => {
+describe("circleSquare", () => {
   it("a circle in a square", () => {
     console.log = jest.fn();
-    square(100, 130);
+    circleSquare(100, 130);
     expect(console.log).toHaveBeenCalledWith("yes");
   });
 });
