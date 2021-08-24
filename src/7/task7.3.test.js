@@ -6,7 +6,8 @@ describe("textInput", () => {
     textInput(el);
 
     el.querySelector("input").value = "some text";
-    el.querySelector("form").submit();
+    const form = el.querySelector("form");
+    form.dispatchEvent(new Event("submit"));
     expect(el.querySelector("ul.history li").innerHTML).toBe("some text");
   });
 });
