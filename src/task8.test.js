@@ -8,11 +8,9 @@ describe("dayOfWeek", () => {
 });
 describe("numberOfMinutes", () => {
   it("numberOfMinutes", () => {
-    const mockDate = new Date(
-      "Mon Aug 16 2021 20:40:15 GMT+0300 (Москва, стандартное время)"
-    );
+    const mockDate = new Date(1629833511819);
     jest.spyOn(global, "Date").mockImplementation(() => mockDate);
-    expect(numberOfMinutes()).toBe("1240");
+    expect(numberOfMinutes()).toBe("1352");
   });
 });
 describe("youngUser", () => {
