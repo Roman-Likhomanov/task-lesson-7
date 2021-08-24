@@ -18,7 +18,8 @@ describe("showButton", () => {
     showButton(el);
 
     const button = el.querySelector("button");
-    el.querySelector("input").keydown();
+    const input = el.querySelector("input");
+    input.dispatchEvent(new Event("keydown"));
     expect(button.hidden).toBe(false);
   });
 });
