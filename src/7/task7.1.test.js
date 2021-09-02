@@ -33,11 +33,15 @@ describe("pageLayout", () => {
       expect(button.hidden).toBe(true);
     });
 
-    it("show the button when entering", () => {
+    it("show the button when entering text and hide it when not", () => {
       const button = el.querySelector("button");
       const input = el.querySelector("input");
-      input.dispatchEvent(new Event("keydown"));
-      expect(button.hidden).toBe(false);
+      input.dispatchEvent(new Event("input"));
+      if (input.value.length === 0) {
+        expect(button.hidden).toBe(true);
+      } else {
+        expect(button.hidden).toBe(false);
+      }
     });
 
     it("text from the input to the list", () => {
@@ -47,6 +51,13 @@ describe("pageLayout", () => {
       expect(el.querySelector("ul.history > li:last-child").innerHTML).toBe(
         "some text"
       );
+    });
+
+    it("if more than 5 li, then delete", () => {
+      const arr = el.querySelectorAll("li");
+      if (arr.length > 5) {
+        expect(el.querySelector("li").toBe(false));
+      }
     });
   });
 });

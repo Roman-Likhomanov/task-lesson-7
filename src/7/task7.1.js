@@ -9,8 +9,12 @@ export function pageLayout(el) {
   const input = document.createElement("input");
   form.appendChild(input);
 
-  input.addEventListener("keydown", () => {
-    button.hidden = false;
+  input.addEventListener("input", () => {
+    if (input.value.length === 0) {
+      button.hidden = true;
+    } else {
+      button.hidden = false;
+    }
   });
 
   const ulHistory = document.createElement("ul");
@@ -29,10 +33,16 @@ export function pageLayout(el) {
   ulHistory.appendChild(li3);
   li3.innerHTML = "I love world!";
 
-  form.addEventListener("submit", () => {
+  form.addEventListener("submit", (ev) => {
+    ev.preventDefault();
     const li4 = document.createElement("li");
     ulHistory.appendChild(li4);
     li4.innerHTML = input.value;
     input.value = "";
+    button.hidden = true;
+    const arr = document.querySelectorAll("li");
+    if (arr.length > 5) {
+      document.querySelector("li").remove();
+    }
   });
 }
