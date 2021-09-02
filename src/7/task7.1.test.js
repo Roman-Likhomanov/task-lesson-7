@@ -56,7 +56,8 @@ describe("pageLayout", () => {
     it("if more than 5 li, then delete", () => {
       const arr = el.querySelectorAll("li");
       if (arr.length > 5) {
-        expect(el.querySelector("li").toBe(false));
+        expect(el.querySelector("ul.history > li:first-child").toBe(false));
+      } else {
       }
     });
   });
