@@ -53,12 +53,13 @@ describe("pageLayout", () => {
       );
     });
 
-    it("if more than 5 li, then delete", () => {
-      const arr = el.querySelectorAll("li");
-      if (arr.length > 5) {
-        expect(el.querySelector("ul.history > li:first-child").toBe(false));
-      } else {
+    it("there are always 5 li elements", () => {
+      el.querySelector("input").value = "1";
+      const form = el.querySelector("form");
+      for (let i = 1; i <= 20; i++) {
+        form.dispatchEvent(new Event("submit"));
       }
+      expect(el.getElementsByTagName("li").length).toBe(5);
     });
   });
 });

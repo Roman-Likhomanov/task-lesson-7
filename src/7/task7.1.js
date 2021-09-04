@@ -40,9 +40,9 @@ export function pageLayout(el) {
     li4.innerHTML = input.value;
     input.value = "";
     button.hidden = true;
-    const arr = document.querySelectorAll("li");
+    const arr = el.querySelectorAll("li");
     if (arr.length > 5) {
-      document.querySelector("li").remove();
+      el.querySelector("li").remove();
     }
   });
 }
