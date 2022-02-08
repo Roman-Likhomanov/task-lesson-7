@@ -8,8 +8,9 @@ describe("dayOfWeek", () => {
 });
 describe("numberOfMinutes", () => {
   it("numberOfMinutes", () => {
-    const mockDate = new Date(1629833511819);
-    jest.spyOn(global, "Date").mockImplementation(() => mockDate);
+    jest
+      .useFakeTimers("modern")
+      .setSystemTime(new Date(2021, 8, 24, 22, 32, 0).getTime());
     expect(numberOfMinutes()).toBe("1352");
   });
 });
